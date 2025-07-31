@@ -24,6 +24,14 @@ nav ul {
     justify-content: center; /* Centers the items */
 }
 
+nav ul.left {
+    margin-right: auto; /* Pushes the left items to the left */
+}
+
+nav ul.right {
+    margin-left: auto; /* Pushes the right items to the right */
+}
+
 nav ul li {
     margin: 0 15px; /* Space between the links */
 }
