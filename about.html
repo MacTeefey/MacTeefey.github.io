@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                <li><a href="{{ '/sports-analytics.html' | relative_url }}">Sports Analytics</a></li>
+                <li><a href="{{ '/other-projects.html' | relative_url }}">Other Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About me</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, deserunt. Officia neque animi repellat autem ipsum non dignissimos iure amet dolorem nihil magni impedit, at ad libero, sapiente eaque dolor.</p>
+        <!-- You can add more content here, like recent posts or featured projects -->
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} Mac Teefey. All rights reserved.</p>
+    </footer>
+</body>
+</html>
