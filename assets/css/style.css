@@ -1,0 +1,49 @@
+/* assets/css/style.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background for the rest of the webpage */
+}
+
+header {
+    background-color: #90ee90; /* Light green color for the toolbar */
+    position: fixed; /* Fixes the toolbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0; /* Padding for the toolbar */
+    z-index: 1000; /* Ensures the toolbar stays above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns items in a row */
+    justify-content: center; /* Centers the items */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between the links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color for the links */
+    font-weight: bold; /* Makes the text bold */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+main {
+    padding-top: 60px; /* Adds space below the fixed header */
+}
+
+footer {
+    text-align: center; /* Centers the footer text */
+    padding: 20px 0; /* Padding for the footer */
+    background-color: #f1f1f1; /* Light gray */
+}
