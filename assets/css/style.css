@@ -58,6 +58,16 @@ main {
     padding-top: 60px; /* Adds space below the fixed header */
 }
 
+/* Image styling for right-aligned images */
+.rightImage {
+    float: right;
+    margin: 0 0 20px 20px; /* Top, right, bottom, left margins */
+    max-width: 300px; /* Maximum width for the image */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 footer {
     text-align: center; /* Centers the footer text */
     padding: 20px 0; /* Padding for the footer */
