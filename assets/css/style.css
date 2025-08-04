@@ -43,6 +43,17 @@ nav ul li a:hover {
     text-decoration: underline; /* Underline on hover for better visibility */
 }
 
+/* Current page indicator styles */
+nav ul li a.current-page {
+    color: #333; /* Darker color for current page */
+    cursor: default; /* Shows default cursor instead of pointer */
+    pointer-events: none; /* Makes the link non-clickable */
+}
+
+nav ul li a.current-page:hover {
+    text-decoration: none; /* No underline on hover for current page */
+}
+
 main {
     padding-top: 60px; /* Adds space below the fixed header */
 }
