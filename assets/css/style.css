@@ -16,20 +16,17 @@ header {
     z-index: 1000; /* Ensures the toolbar stays above other content */
 }
 
+nav {
+    display: flex; /* Makes nav a flex container */
+    justify-content: space-between; /* Spreads left and right sections */
+    align-items: center; /* Centers items vertically */
+}
+
 nav ul {
     list-style-type: none; /* Removes bullet points from the list */
     margin: 0;
     padding: 0;
     display: flex; /* Aligns items in a row */
-    justify-content: center; /* Centers the items */
-}
-
-nav ul.left {
-    margin-right: auto; /* Pushes the left items to the left */
-}
-
-nav ul.right {
-    margin-left: auto; /* Pushes the right items to the right */
 }
 
 nav ul li {
