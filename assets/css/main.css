@@ -42,6 +42,28 @@ a:hover {
   padding: 0 20px;
 }
 
+/* Header */
+.header {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 4rem;
+  font-family: "Quattrocento Sans", sans-serif;
+  background-color: transparent;
+  border: none;
+}
+
+.header-title a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #505050;
+}
+
+.header-subtitle {
+  color: #999;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -62,21 +84,19 @@ a:hover {
 
 /* Navigation */
 nav {
-  background-color: #f8f8f8;
-  padding: 20px 0;
-  border-bottom: 1px solid #e7e7e7;
+  background-color: transparent;
+  padding: 0;
+  border-bottom: none;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -88,6 +108,75 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #666;
+}
+
+/* Menu Layout */
+.menu {
+  padding-top: 1rem;
+  display: block;
+  overflow: hidden;
+  clear: both;
+  margin-top: 0.5rem;
+}
+
+.menu-content {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-content a {
+  color: #999;
+  font-size: 1rem;
+  padding-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.menu-content a:hover {
+  color: #333;
+}
+
+.social-icons {
+  float: right;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons a {
+  color: #999;
+  font-size: 1rem;
+  margin: 0 5px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+/* Ensure proper spacing and alignment */
+.menu::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 30em) {
+  .social-icons {
+    float: left;
+    padding-top: 0px;
+    text-align: left;
+  }
+  .menu-content {
+    margin-bottom: 5px;
+  }
 }
 
 /* Content */
@@ -191,20 +280,4 @@ hr {
   margin: 30px 0;
 }
 
-/* Social icons */
-.social-icons {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.5em;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #666;
-} 
+ 
