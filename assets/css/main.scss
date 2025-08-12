@@ -31,5 +31,11 @@ $medium-color:         #00AB6C;
 $codepen-color:        black;
 $rss-color:            #ff6600;
 
-/* Note: SCSS variables defined above for potential future use */
-/* Main styles are now in main.css */
+/* Import original theme styles */
+@import "base";
+@import "default";
+@import "social-icons";
+@import "code";
+@import "home";
+@import "post";
+@import "sections-dir";
