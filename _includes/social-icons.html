@@ -1,8 +1,32 @@
 {% for item in site.data.settings.social %}
   {% assign first_char = item.link | slice: 0 %}
   {% if first_char == '/' %}
-    <a href="{{ site.baseurl }}{{ item.link }}"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
+    <a href="{{ site.baseurl }}{{ item.link }}">
+      {% if item.icon == 'github' %}
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      {% elsif item.icon == 'linkedin' %}
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      {% elsif item.icon == 'envelope' %}
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      {% elsif item.icon == 'rss-square' %}
+        <i class="fa-solid fa-rss" aria-hidden="true"></i>
+      {% else %}
+        <i class="fa-solid fa-{{ item.icon }}" aria-hidden="true"></i>
+      {% endif %}
+    </a>
   {% else %}
-    <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
+    <a href="{{ item.link }}" target="_blank">
+      {% if item.icon == 'github' %}
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      {% elsif item.icon == 'linkedin' %}
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      {% elsif item.icon == 'envelope' %}
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      {% elsif item.icon == 'rss-square' %}
+        <i class="fa-solid fa-rss" aria-hidden="true"></i>
+      {% else %}
+        <i class="fa-solid fa-{{ item.icon }}" aria-hidden="true"></i>
+      {% endif %}
+    </a>
   {% endif %}
 {% endfor %}
