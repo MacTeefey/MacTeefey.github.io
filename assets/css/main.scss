@@ -1,3 +1,6 @@
+---
+---
+
 /* Jekyll front matter */
 $sans-serif-font-family: "Quattrocento Sans", sans-serif;
 $serif-font-family:      "PT Serif", Georgia, "Times New Roman", serif;
@@ -28,4 +31,4 @@ $medium-color:         #00AB6C;
 $codepen-color:        black;
 $rss-color:            #ff6600;
 
-@import "-sections-dir";
+@import "sections-dir";
