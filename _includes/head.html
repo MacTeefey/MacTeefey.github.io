@@ -1,8 +1,6 @@
 <head>
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
-    {% if page.title == "About" %}
+    {% if page.title == "Home" || page.title == "About" %}
       {{ site.title }} | {{ site.description }}
     {% else %}
       {{ page.title }} | {{ site.title }}
