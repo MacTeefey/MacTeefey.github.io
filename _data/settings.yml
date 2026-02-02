@@ -8,9 +8,11 @@ google-ID: ''
 
 menu:
 - {name: 'About',   url: 'about.html'}
-- {name: 'Projects', url: 'projects.html'}
+- {name: 'Bachelors Projects', url: 'bachelors-projects.html'}
+- {name: 'Masters Projects', url: 'masters-projects.html'}
 - {name: 'Articles', url: 'articles.html'}
-- {name: 'Research', url: 'research.html'}
+- {name: 'Bachelors Research', url: 'undergraduate.html'}
+- {name: 'Masters Research', url: 'masters.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
