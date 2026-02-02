@@ -1,0 +1,235 @@
+/*
+  Sidebar Navigation
+*/
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $dark-gray-color;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+// Add margin to container on mobile to avoid overlap with toggle
+@media (max-width: 768px) {
+  .container {
+    margin-top: 60px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  padding-top: 60px;
+
+  &.active {
+    left: 0;
+  }
+
+  @media (min-width: 769px) {
+    left: 0;
+    box-shadow: none;
+    border-right: 1px solid $extra-light-gray-color;
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .menu-item {
+    border-bottom: 1px solid $extra-light-gray-color;
+
+    .menu-link {
+      display: block;
+      padding: 15px 20px;
+      color: $dark-gray-color;
+      text-decoration: none;
+      font-family: $sans-serif-font-family;
+      font-size: 1rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background-color: #f5f5f5;
+        color: $link-color;
+      }
+    }
+
+    &.has-submenu {
+      position: relative;
+
+      .menu-link {
+        padding-right: 50px;
+      }
+
+      .submenu-toggle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        color: $light-gray-color;
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $dark-gray-color;
+        }
+
+        i {
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &.active {
+        .submenu-toggle i {
+          transform: rotate(180deg);
+        }
+      }
+
+      .submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #f9f9f9;
+
+        li {
+          border-top: 1px solid $extra-light-gray-color;
+
+          a {
+            display: block;
+            padding: 12px 20px 12px 40px;
+            color: $body-color;
+            text-decoration: none;
+            font-family: $sans-serif-font-family;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+
+            &:hover {
+              background-color: #f0f0f0;
+              color: $link-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Adjust container when sidebar is open on desktop
+@media (min-width: 769px) {
+  body {
+    padding-left: 280px;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100% - 300px);
+  }
+}
+
+// Prevent body scroll when sidebar is open on mobile
+body.sidebar-open {
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
+}
+
+// Get in Touch Section
+.get-in-touch {
+  margin-top: 3rem;
+  padding-top: 2rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-family: $sans-serif-font-family;
+    color: $dark-gray-color;
+  }
+
+  .contact-info {
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+
+      strong {
+        color: $dark-gray-color;
+        margin-right: 0.5rem;
+      }
+
+      a {
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

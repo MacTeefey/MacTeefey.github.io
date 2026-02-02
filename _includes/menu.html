@@ -1,10 +1,29 @@
-<div class="menu">
-  <nav class="menu-content">
+<div class="sidebar-toggle" id="sidebarToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div class="sidebar" id="sidebar">
+  <nav class="sidebar-menu">
     {% for item in site.data.settings.menu %}
-      <a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a>
+      {% if item.submenu %}
+        <div class="menu-item has-submenu">
+          <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
+          <button class="submenu-toggle" aria-label="Toggle submenu">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="submenu">
+            {% for subitem in item.submenu %}
+              <li><a href="{{ site.github.url }}/{{ subitem.url }}">{{ subitem.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% else %}
+        <div class="menu-item">
+          <a href="{{ site.github.url }}/{{ item.url }}" class="menu-link">{{ item.name }}</a>
+        </div>
+      {% endif %}
     {% endfor %}
   </nav>
-  <nav class="social-icons">
-    {% include social-icons.html %}
-  </nav>
 </div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>

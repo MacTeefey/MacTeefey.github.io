@@ -28,3 +28,29 @@ layout: default
         
     <p>You can read more about my projects and research here.</p>
 </div>
+
+<!-- Get in Touch Section -->
+<div class="get-in-touch">
+    <hr>
+    <h2>Get in touch</h2>
+    <div class="contact-info">
+        {% for item in site.data.settings.social %}
+            {% if item.icon == 'envelope' %}
+                <p>
+                    <strong>Email:</strong> 
+                    <a href="{{ item.link }}">{{ item.link | replace: 'mailto:', '' }}</a>
+                </p>
+            {% elsif item.icon == 'linkedin' %}
+                <p>
+                    <strong>LinkedIn:</strong> 
+                    <a href="{{ item.link }}" target="_blank">{{ item.link }}</a>
+                </p>
+            {% elsif item.icon == 'github' %}
+                <p>
+                    <strong>GitHub:</strong> 
+                    <a href="{{ item.link }}" target="_blank">{{ item.link }}</a>
+                </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

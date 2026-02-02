@@ -7,12 +7,16 @@ disqus:
 google-ID: ''
 
 menu:
-- {name: 'About',   url: 'about.html'}
-- {name: 'Bachelors Projects', url: 'bachelors-projects.html'}
-- {name: 'Masters Projects', url: 'masters-projects.html'}
-- {name: 'Articles', url: 'articles.html'}
-- {name: 'Bachelors Research', url: 'undergraduate.html'}
-- {name: 'Masters Research', url: 'masters.html'}
+- {name: 'Home', url: 'index.html'}
+- {name: 'Research', url: 'research.html', submenu: [
+    {name: 'Undergraduate', url: 'undergraduate.html'},
+    {name: 'Masters', url: 'masters.html'}
+  ]}
+- {name: 'Education', url: 'education.html', submenu: [
+    {name: 'Undergraduate', url: 'undergraduate-education.html'},
+    {name: 'Masters', url: 'masters-education.html'}
+  ]}
+- {name: 'Personal Projects', url: 'projects.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
