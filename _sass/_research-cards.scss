@@ -1,0 +1,86 @@
+/*
+  Research List Layout
+*/
+
+.research-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.research-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $extra-light-gray-color;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-family: $sans-serif-font-family;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $dark-gray-color;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+
+    a {
+      color: $dark-gray-color;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $body-color;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+.research-intro {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-family: $sans-serif-font-family;
+    color: $dark-gray-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.7;
+    color: $body-color;
+  }
+
+  .external-link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .research-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
