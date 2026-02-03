@@ -1,30 +1,47 @@
 /*
-  Research List Layout
+  Research Cards Layout - Phantom Style
 */
 
 .research-list {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  @media (max-width: 736px) {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
 }
 
 .research-item {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid $extra-light-gray-color;
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+  padding: 2em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 
-  &:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  &:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
   }
 
   h3 {
     font-family: $sans-serif-font-family;
-    font-size: 1.25rem;
+    font-size: 1.1em;
     font-weight: 600;
     color: $dark-gray-color;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    margin: 0 0 0.75em 0;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 
     a {
       color: $dark-gray-color;
@@ -33,54 +50,83 @@
 
       &:hover {
         color: $link-color;
-        text-decoration: underline;
       }
     }
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9em;
     color: $body-color;
-    line-height: 1.7;
+    line-height: 1.75;
     margin: 0;
+  }
+
+  // Icon indicator
+  &::after {
+    content: '\f1c1'; // PDF icon
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.15);
+    transition: color 0.2s ease;
+  }
+
+  &:hover::after {
+    color: rgba(0, 0, 0, 0.25);
   }
 }
 
 .research-intro {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 
   h2 {
     font-family: $sans-serif-font-family;
     color: $dark-gray-color;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   p {
-    line-height: 1.7;
+    line-height: 1.75;
     color: $body-color;
+    font-size: 1em;
   }
 
   .external-link {
     color: $link-color;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
 
     &:hover {
-      text-decoration: underline;
+      border-bottom-color: $link-color;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 736px) {
   .research-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5em;
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1em;
+      margin-bottom: 0.5em;
     }
 
     p {
-      font-size: 0.95rem;
+      font-size: 0.85em;
+    }
+
+    &::after {
+      font-size: 1.25em;
+      top: 1.25em;
+      right: 1.25em;
     }
   }
 }
