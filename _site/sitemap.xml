@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/assets/pdfs/Masters/MCS%20Portfolio%20Project%20Inclusion%20Request-1-1.pdf</loc>
+<lastmod>2026-02-02T15:10:13-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/Masters/MCS%20Portfolio%20Project%20Inclusion%20Request-2.pdf</loc>
+<lastmod>2026-02-02T15:10:38-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/Undegraduate/1_Teefey_Maclay_2023_BS_Cover.pdf</loc>
+<lastmod>2026-01-13T16:13:08-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/Undegraduate/2_Teefey_Maclay_2023_BS_Capstone.pdf</loc>
+<lastmod>2026-01-13T16:11:51-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/Undegraduate/3_Teefey_Maclay_2023_BS_Sociotechnical.pdf</loc>
+<lastmod>2026-01-13T16:12:11-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/Undegraduate/4_Teefey_Maclay_2023_BS_Prospectus.pdf</loc>
+<lastmod>2026-01-13T16:12:30-05:00</lastmod>
+</url>
+</urlset>
