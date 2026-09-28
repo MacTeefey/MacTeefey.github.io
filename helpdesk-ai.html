@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Mac Teefey</title>
+		<title>HelpDesk AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
@@ -30,7 +30,7 @@
 				
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Maclay Teefey</span>
+									<span class="symbol"><img src="images/logo.svg" alt="Dog logo" /></span><span class="title">Mac Teefey</span>
 								</a>
 				
 							<!-- Nav -->
@@ -56,78 +56,26 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<div class="row">
-								<div class="col-4">
-									<span class="image fit"><img src="images/MacSamson.jpg" alt="Me in a suit with my dog Samson" width="100%" /></span>
-								</div>
-
-								<div class="col-8">
-									<div class="titles">
-										Agentic AI Developer, <a href="https://www.linkedin.com/company/skillstorm">SkillStorm</a><br>
-										Software Developer, Previously At <a href="https://www.linkedin.com/company/epic1979">Epic</a><br>
-										Master's Degree Holder, <a href="https://degrees.apps.asu.edu/masters-phd/major/ASU00/ESCSEBDMCS/computer-science-big-data-systems-mcs">Arizona State University</a><br>
-										Bachelor's Degree Holder, <a href="https://engineering.virginia.edu/department/computer-science/academics/undergraduate-programs/bs-computer-science">University of Virginia</a>
-										<section class="tiles">
-											<article class="style2">
-												<span class="image">
-													<img src="images/pic10.jpg" alt="" />
-												</span>
-												<a href="assets/pdfs/Resume/MaclayTeefeyResumeAgenticAI.pdf">
-													<h2>Resume</h2>
-													<div class="content">
-														<p>Download my current resume (PDF)</p>
-													</div>
-												</a>
-											</article>
-										</section>
-									</div>
-								</div>
-							</div>
-
-							<hr>
-
-							<p>I'm an Agentic AI Developer building agentic AI systems as a SkillStorm trainee, and a Master's graduate in <a href="https://degrees.apps.asu.edu/masters-phd/major/ASU00/ESCSEBDMCS/computer-science-big-data-systems-mcs">Computer Science (Big Data Systems)</a> from Arizona State University. Before that, I spent a year and a half as a full-stack software developer at Epic.</p>
-							<p>I am using this website as an outlet for my personal and educational work.</p>
-
-							<h2 style="margin-top: 3em;">Certifications</h2>
-							<section class="tiles">
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="https://learn.microsoft.com/api/credentials/share/en-us/MaclayTeefey-7155/6BFAF409515655D0?sharingId=BDFEDFFC200C3326">
-										<h2>Microsoft Certified: Azure AI Apps and Agents Developer Associate</h2>
-										<div class="content">
-											<p>Issued by Microsoft, August 2026. Validates designing, building, and deploying AI apps and agents on Azure. View credential.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="https://www.credly.com/badges/fc4dac90-aa5e-466f-b4e7-eaaf16cf4d70">
-										<h2>Claude Certified Developer - Foundations</h2>
-										<div class="content">
-											<p>Issued by Anthropic, August 2026. Validates foundational skills for building applications and agents with Claude. View credential.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic13.jpg" alt="" />
-									</span>
-									<a href="https://learn.microsoft.com/api/credentials/share/en-us/MaclayTeefey-7155/EFE510B60C926BBA?sharingId=BDFEDFFC200C3326">
-										<h2>Microsoft Certified: Azure AI Fundamentals</h2>
-										<div class="content">
-											<p>Issued by Microsoft, August 2026. Validates core AI and machine learning concepts and Azure AI services. View credential.</p>
-										</div>
-									</a>
-								</article>
-							</section>
+							<h1>HelpDesk AI Automation System: Knowledge &amp; Retrieval</h1>
+							<span class="image main"><img src="images/pic15.jpg" alt="" /></span>
+							<h2>Overview</h2>
+							<p>HelpDesk AI is an agentic system that investigates inbound IT helpdesk tickets against live identity state, decides what should be done, gets human approval before it deactivates, reactivates or deletes an account, and carries out routine IT service work. It was built by a 15-person engineering group split into five teams.</p>
+							<h2>My Role</h2>
+							<p>I was on the Knowledge &amp; Retrieval team, which owned the grounded knowledge layer: every runbook, policy and manual the agents cite when they decide what to do. Retrieval is load-bearing in this system. If an agent can't retrieve the governing runbook section, it blocks and escalates instead of answering from general model knowledge.</p>
+							<h2>Highlights</h2>
+							<ul>
+								<li>Sourced and structured three knowledge corpora (IT runbooks, policy, and a tool-access matrix; laptop manuals for 11 device models; and closed-ticket resolutions) into three hybrid-search indexes with filterable metadata.</li>
+								<li>Extracted vendor laptop manuals with Azure AI Document Intelligence, and made adding a new device model a one-file change by generating the downstream configuration and chunks from a single source.</li>
+								<li>Built a structure-aware chunker with stable chunk IDs, folding 63 heading-only chunks into their content and cutting sub-100-token fragments from 24.8% to 17.8% of a 966-chunk index.</li>
+								<li>Added heading context to each chunk's embedding while preserving de-duplication of shared manual text, which avoided roughly 36% more embedding calls on every rebuild.</li>
+								<li>Made device-model filtering mandatory on every manual query, so near-identical manuals can't produce a confident answer about the wrong laptop. Enabled multi-hop retrieval from runbooks to the policies they defer to.</li>
+								<li>Declared the corpus's distractor, out-of-corpus and near-miss topic lists that drive refusal testing, built the retrieval tools the agents call, and wrote an end-to-end retrieval test suite plus re-index checks.</li>
+							</ul>
+							<p><em>This project's source is private. This page is a high-level overview shared with permission.</em></p>
 						</div>
 					</div>
-		<!-- Footer -->
+
+				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<section>
@@ -144,7 +92,7 @@
 											<textarea name="message" id="message" placeholder="Message" required></textarea>
 										</div>
 									</div>
-									<input type="hidden" name="_subject" value="Contact Form Submission from Projects Page" />
+									<input type="hidden" name="_subject" value="Contact Form Submission from Generic Page" />
 									<input type="hidden" name="_captcha" value="false" />
 									<input type="hidden" name="_next" value="" />
 									<ul class="actions">
